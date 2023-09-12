@@ -115,6 +115,7 @@ ManfuctureCar.prototype.getNameOfCar = function () {
 
 const passat = new ManfuctureCar("passat", 4, 2, "petrol");
 console.log(passat);
+
 passat.getCarDetails();
 passat.getNameOfCar();
 
