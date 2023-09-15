@@ -1,3 +1,106 @@
-h1{
+div{
           color: brown;
 }
+
+/* Four Pillars of properties */
+/*List Property*/
+ul{
+          list-style-type :circle;
+          /* list-style: square inside url("../Html/sample_image.jpg"); */
+}
+
+/*Font Property*/
+p{
+  font-size: 20px;  
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+/*Text Property*/
+p{
+    text-align: center;     
+    text-transform: uppercase; 
+     text-decoration: underline;
+     line-height: 1.5;
+     letter-spacing: 1.5px;
+}
+
+/* Border property */
+p{  
+          /* border : border-width border-style corder-color */
+          border: 2px solid black;
+          border-radius: 10px;
+}
+/* div{       
+          text-align: center;
+          font-size: 13px;
+          border-top : 2px solid green;
+          border-right : 2px dashed red;
+          border-bottom : 2px dotted burlywood;
+          border-left: 2px double blue;
+          
+} */
+/* class selectror
+. selector */
+ .ele{
+          text-align: center;
+          color:black
+ }
+
+ .brd{
+          border : 2px solid red;
+          border-radius: 5px;
+          background-color: blanchedalmond;
+ }
+/* Id Slectors */
+ #uni-ele
+ {
+          text-align: center;
+          font-style: italic;
+          color: yellowgreen;
+ }
+ #uni-ele2{
+          text-align: start;
+          font-style: normal;
+          color: crimson;
+ }
+
+
+ #container a{
+          background-color: chartreuse;
+          text-decoration: none;
+ }
+ .anc-link{
+          background-color: crimson !important;
+ }
+ .block{
+          display: block;
+          margin: 10px;
+          padding: 5px;
+          width: 70px;
+          height: 20px;
+          background-color: red;
+          text-align: center;
+ }
+ .inline{
+          display: inline;
+          background-color: red;
+          text-align: center;
+          margin: 10px;
+          padding: 5px;
+          color:black;
+    /* cannot do width and height  */
+          width: 70px;
+          height: 20px;
+ }
+
+ .inline-block{
+          display: inline-block;
+          background-color: red;
+          text-align: center;
+          margin: 10px;
+          padding: 5px;
+          color:black;
+          width: 70px;
+          height: 20px;
+ }
