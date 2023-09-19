@@ -1,0 +1,64 @@
+.txt-cen{
+         text-align: center; 
+}
+.box-out{
+          width:300px;
+          height: 300px;
+          background-color: red;
+}
+.box-mod{
+     width: 150px;
+     height: 150px;   
+     background-color: blue; 
+     /* padding: 30px; */
+     /* padding-left: 15px;
+     padding-right: 20px;
+     padding-top: 25px;
+     padding-bottom: 30px; */
+     padding: 15px 20px 25px 30px; 
+           /* top right bottom left */
+     border: 10px solid black;
+     margin: 10px 20px 25px 30px;
+
+}
+button{
+      margin: 10px;
+      padding: 10px; 
+      border: none;   
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+}
+
+button:hover{
+          background-color: green;
+          color: red;
+          cursor: pointer;
+}
+
+a:hover{
+          background-color: blue;
+}
+a:active{
+          background-color:green;
+}
+a:visited{
+   color: goldenrod;
+}
+.inp-fld:focus{
+      background-color: green;  
+}
+
+li:first-child{
+          font-size: larger;
+          font-weight: bolder;
+}
+ul > li:last-child{
+          color:red
+}
+li:nth-child(odd){
+  background-color: blueviolet;
+}
+li:not(.not-style){
+  color: red
+}
