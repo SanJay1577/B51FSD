@@ -1,0 +1,74 @@
+*{
+          margin: 0;
+          padding: 0;
+}
+
+#main-box{
+   border : 2px solid black;
+   width: 500px;
+   height: 500px;
+   margin: 0 auto;
+   background-color: coral;
+   padding: 10px 0px 10px 0px;
+
+
+}
+
+.box{
+          border: 2px solid black;
+          width: 100px;
+          height: 100px;
+          margin: 5px;
+          color: white;
+          text-align: center;
+          font-size: larger;
+}
+.absolute{
+          background-color: brown;
+          /* position: absolute;
+          left : 25px;
+          top : 10px; */
+}
+
+.relative{
+          /* margin-left: 150px; */
+          background-color: green;
+          /* position: relative;
+          bottom : 20px;
+          right : 15px;
+          top: 10px;
+          left : 50px; */
+}
+
+.sticky{
+          background-color: chocolate;   
+          position: sticky;  
+          top: 0;
+}
+
+.fixed{
+          background-color: darkmagenta;
+          /* position: fixed;
+          top: 0;
+          right : 0; */
+
+}
+
+.parent{
+          font-size : 18px;
+          color: red;
+          /* horizontal gradients  */
+          /* to right, to left, to bottom, to top */
+          /* background: linear-gradient(to right,  yellow, green); */
+}
+
+p{
+          font-size: 12px;
+          color: blue;
+          background: radial-gradient(circle, yellow, blueviolet);
+}
+
+.child{
+      font-size: inherit; 
+      color: inherit;   
+}

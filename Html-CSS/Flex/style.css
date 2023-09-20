@@ -17,21 +17,21 @@
      /* flex-direction: row-reverse; */
      /* flex-direction: column; */
      /* for y-axis direction */
-        justify-content: center;   
-     /* justify-content: space-around; */
+        /* justify-content: center;    */
+      /* justify-content: space-around;  */
       /* justify-content: space-between; */
       /* justify-content: flex-end; */
       /* justify-content: flex-start; */
       /* justify-content: space-evenly; */
-      /* justify-content: stretch; */
+      justify-content: stretch;
  /* for x-axis direction */
-    align-content: center; 
+    /* align-content: center;  */
      /* align-content: space-around; */
      /* align-content: space-evenly; */
     /* align-content: flex-start;
     align-content: flex-end; */
     /* align-content: space-between; */
-    /* align-content: stretch; */
+    align-content: stretch;
      /* align-items: center; */
 
 }
