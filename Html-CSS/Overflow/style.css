@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+
+.overflow-container{
+    height: 300px; /*vh*/
+    border : 2px solid black;
+    width: 50%;
+    background-color: bisque;
+    padding : 5px;
+    font-family: 'Fuggles', cursive;
+    /* overflow: visible;
+     it will show the overflow content in screen */
+
+      /* overflow: scroll; */
+       /*Scroll will give scrollable feature in x and y axis */ 
+
+    /* overflow: hidden; */
+    /* overflow-y : hidden; */
+    /* overflow-x : hidden; */
+   /* hide the overflow content in both axis or in selected axis */
+     overflow: auto;
+     /* suitable over flow property is decided  */
+}
+
+.mes{
+  height : 200px;
+  border: 3px solid black;
+  width: 50vw;
+  margin : 0 auto;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap : 5%;
+}
+
+/* Measurements 
+cm , mm , in Absolute 
+px pixel (1/96 of 1-inch) 1
+pt points (1/72 1inch)  11
+pc picas (1/12 1inch) 1
+vw view width
+vh view height
+ */
+
+.sam-1{
+   width: 25px;
+   height : 25px;
+   background-color: red;
+}
+.sam-2{
+   font-size: 25px;
+   width: 10px;
+   background-color: violet;
+}
+html{
+  font-size: 20px;
+}
+/* relative  measurements */
+/* em rem , % percentage  */
+/* em relative to font size of parent elemnent */
+/* 1em = 25px */
+/* rem  realtive to font size of root element */
+/* 1rem = 20px*/
+
+.inside{
+  width :2rem;
+  height:2rem;
+  background-color: blue;
+}
+

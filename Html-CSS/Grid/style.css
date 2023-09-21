@@ -53,11 +53,14 @@
      /* place-items: center; */
      /* grid-template-columns: 150px 50px 50px 50px;
      grid-template-rows: 400px 100px; */
-     grid-template-columns: repeat(2, 1fr);
+     gap: 0.5rem;
+     grid-template-columns: repeat(4, 1fr);
+     padding : 15px;
 }
 
-.box{
+.box{     
           border : 1px solid black;
           text-align: center;
           background-color: red;
 }
+
