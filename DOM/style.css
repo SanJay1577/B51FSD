@@ -1,0 +1,10 @@
+*{
+          padding: 0;
+          margin:0;
+          text-align: center;
+}
+
+.js-class{
+          border:  2px solid black;
+          padding : 3px;
+}
