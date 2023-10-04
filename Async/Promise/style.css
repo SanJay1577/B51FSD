@@ -1,0 +1,27 @@
+.container{
+          background-color: white;
+          max-width: 15rem;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          box-shadow: 3px 3px 10px 0px rgb(22, 11, 11);
+}
+body{
+          background-color: whitesmoke;
+          justify-content: center;
+          gap: 1rem;
+          display: grid;
+          justify-content: center;
+          grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+#flag{
+          width: 100%;
+          height : 10rem;
+}
+.info{
+          padding : 1rem;
+}
+
+.info span {
+          font-weight: bold;
+}
