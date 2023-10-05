@@ -145,6 +145,7 @@ fetch("https://restcountries.com/v3.1/all")
         population: element.population,
         region: element.region,
         capital: element.capital,
+        countryCode: element.cca3 ? element.cca3 : "no countrycode",
       };
       createCountryCard(countryObject);
     });
@@ -166,6 +167,7 @@ function createCountryCard(element) {
           <p><span>Population : ${element.population}</span></p>
           <p><span>Region : ${element.region}</span></p>
           <p><span>Capital : ${element.capital}</span></p>
+          <p><span>Country Code : ${element.countryCode}</span></p>
           <button onclick="${getWeather(element.name)}">get weather</button>
           </div>
           </div>
