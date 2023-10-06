@@ -38,4 +38,18 @@ function countDown() {
     clearTimeout(id);
   }
 }
-countDown();
+//countDown();
+const intervalEle = document.querySelector("#int-timer");
+//setInterval
+let intervalDigit = 10;
+function intervalTimer() {
+  let intervalId = setInterval(() => {
+    intervalEle.textContent = intervalDigit;
+    intervalDigit--;
+    if (intervalDigit <= 0) {
+      clearInterval(intervalId);
+      intervalEle.textContent = "Timer out";
+      intervalDigit = 10;
+    }
+  }, 1000);
+}
