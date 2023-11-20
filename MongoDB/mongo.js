@@ -84,3 +84,78 @@ db.mentors.insertMany([
     batch: "b51WD2",
   },
 ]);
+
+db.mentors.find();
+
+// to get all data
+db.students.find().toArray();
+
+db.students.find().forEach(function (stud) {
+  print("studentName " + stud.name);
+});
+
+// aggregates
+//sorting
+// asc
+db.students.find().sort({ task: 1 }).toArray();
+//desc
+db.students.find().sort({ task: -1 }).toArray();
+//limit
+db.students.find().sort({ task: 1 }).limit(5);
+//skip
+db.students.find().limit(5).skip(1);
+//count
+db.students.find({ task: 80 }).count();
+// greater than
+db.students.find({ task: { $gt: 74 } });
+//greater than or eqaul
+db.students.find({ task: { $gte: 74 } });
+//lesser than
+db.students.find({ task: { $lt: 74 } });
+//lesser than or equal
+db.students.find({ task: { $lte: 74 } });
+//not operator
+db.students.find({ task: { $not: { $gt: 30, $lt: 75 } } });
+//30, 74, 75, 80
+//-> not/in  <-
+// in values
+db.students.find({ task: { $gt: 30, $lt: 75 } });
+//or operator
+db.students.find({ $or: [{ task: 75 }, { name: "Balaji" }] });
+
+//lookup
+//aggregate[stag1, stage2, stage3]
+db.mentors.aggregate([
+  {
+    $lookup: {
+      from: "students",
+      localField: "batch",
+      foreignField: "batch",
+      as: "mentor_students_data",
+    },
+  },
+]);
+// stages of aggregation
+db.students.aggregate([
+  { $match: { status: "exprienced" } },
+  { $group: { _id: "$name", totalExperience: { $sum: "$task" } } },
+]);
+
+//removing the duplicates
+db.students
+  .aggregate([
+    {
+      $group: {
+        _id: "$name",
+        duplicate: { $addToSet: "$_id" },
+        TotalCount: { $sum: 1 },
+      },
+    },
+    {
+      $match: { TotalCount: { $gt: 1 } },
+    },
+  ])
+  .forEach((doc) => {
+    doc.duplicate.shift();
+    db.students.deleteMany({ _id: { $in: doc.duplicate } });
+  });
