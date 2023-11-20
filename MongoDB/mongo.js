@@ -69,3 +69,18 @@ db.students.updateOne(
 db.students.deleteOne({ _id: ObjectId("6556e00b8e3530d9aeafc2c9") });
 
 db.students.deleteMany({ name: "Praveen" });
+// mentors
+db.mentors.insertMany([
+  {
+    name: "Sanjay",
+    batch: "b51WD",
+  },
+  {
+    name: "Nagarajan",
+    batch: "B52WD",
+  },
+  {
+    name: "Sangeetha",
+    batch: "b51WD2",
+  },
+]);
