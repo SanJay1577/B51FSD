@@ -1,46 +1,48 @@
 import express from "express";
+import { client } from "./db.js";
 
+// intiating server
 const app = express();
-// middle wares
+
+//middlewares
 app.use(express.json());
-let resturants = [
-  {
-    id: "1",
-    name: "KFC",
-    special: "Crispy Chicken",
-  },
-  {
-    id: "2",
-    name: "A2B",
-    special: "Sweets",
-  },
-];
-// get info
-app.get("/res", (req, res) => {
-  res.send(resturants);
+
+//add doctor
+
+app.post("/doctor/add", async (req, res) => {
+  // doctor data
+  //we need to handle error in req.body
+  const data = { ...req.body, status: "Available" };
+
+  // need to make error responses
+
+  // adding data to the db
+  //we need to handle error in req.body
+  const newDoctor = await client
+    .db("Docapp")
+    .collection("doctors")
+    .insertOne(data);
+
+  res.status(201).json({ data: newDoctor });
 });
 
-app.post("/add/res", (req, res) => {
-  const newRestuarnt = {
-    ...req.body,
-    id: (resturants.length + 1).toString(),
-  };
-  resturants = [...resturants, newRestuarnt];
-  res.send(resturants);
+app.get("/doctor/all", async (req, res) => {
+  //get data from db
+  const doctors = await client
+    .db("Docapp")
+    .collection("doctors")
+    .find({})
+    .toArray();
+
+  res.status(200).json({ data: doctors });
 });
 
-app.put("/edit/res/:id", (req, res) => {
-  const { id } = req.params;
-  const findRes = resturants.find((res) => res.id === id);
-  findRes.special = req.body.special;
-  res.send(resturants);
-});
+app.put("/doctor/edit/:id", (req, res) => {});
 
-app.delete("/delete/:id", (req, res) => {
-  const { id } = req.params;
-  const newset = resturants.filter((res) => res.id != id);
-  resturants = [...newset];
-  res.send(`Deleted Resturant`);
-});
-//listen to ther server
-app.listen(9000, () => console.log("server sarted in localhost:9000"));
+app.delete("/doctor/edit/:id", (req, res) => {});
+
+//initiating PORT
+const PORT = 9000;
+
+//listening to a server
+app.listen(PORT, () => console.log(`Server listning in localhost:${PORT}`));

@@ -117,6 +117,8 @@ db.students.find({ task: { $lte: 74 } });
 //not operator
 db.students.find({ task: { $not: { $gt: 30, $lt: 75 } } });
 //30, 74, 75, 80
+// 74, 75, 80
+// 74,
 //-> not/in  <-
 // in values
 db.students.find({ task: { $gt: 30, $lt: 75 } });
