@@ -1,0 +1,2 @@
+This text file is written in nodejs
+ New line added in a file
