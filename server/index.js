@@ -1,14 +1,16 @@
 import express from "express";
 import { doctorRouter } from "./Routes/doctor.js";
-
+import dotenv from "dotenv";
 // intiating server
 const app = express();
 
 //middlewares
 app.use(express.json());
 
+//env configuration
+dotenv.config();
 //initiating PORT
-const PORT = 9000;
+const PORT = process.env.PORT;
 
 // applicational routes
 app.use("/doctor", doctorRouter);

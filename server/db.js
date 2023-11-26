@@ -1,6 +1,5 @@
 import { MongoClient } from "mongodb";
-const connectionString =
-  "mongodb+srv://sanjay:sanjay15@cluster0.u7fcbl5.mongodb.net/";
+const connectionString = process.env.MONGO_URL;
 
 const localString = "mongodb://127.0.0.1:27017/Docapp";
 async function dbConnection() {
