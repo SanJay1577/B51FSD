@@ -5,6 +5,7 @@ import {
   editDoctor,
   getAllDoctors,
 } from "../Controllers/doctor.js";
+import { isAuthorized } from "../Auth/auth.js";
 
 // initializing router
 const router = express.Router();
